@@ -45,16 +45,26 @@ This will be the local port 8000 listeners, all inbound connections will be forw
 
 Based on the specified protocol (HTTP or SOCKS5), the function will start a proxy server. It is to monitor the address specified.
 
-- http proxy
+- HTTP proxy without authentication
 
 ```shell
-./rdnat -proxy http 8888
+./rdnat -proxy http 8888 -no-auth
 ```
 
-- socket5 proxy
+- HTTP proxy with authentication
 
 ```shell
-./rdnat -proxy socks5 1080
+./rdnat -proxy http 8888 <username> <password>
 ```
 
-​	
+- SOCKET5 proxy without authentication
+
+```shell
+./rdnat -proxy socks5 1080 -no-auth
+```
+
+- SOCKS5 proxy with authentication
+
+```shell
+./rdnat -proxy socks5 1080 <username> <password>
+```
