@@ -10,7 +10,7 @@ use std::str;
 use base64::encode;
 
 const RETRY_INTERVAL: u64 = 5;
-const VERSION: &str = "v0.0.1";
+const VERSION: &str = "v1.0.0";
 
 #[tokio::main]
     async fn main() -> Result<(), Box<dyn Error>> {
